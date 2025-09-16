@@ -2,7 +2,7 @@ name: first work flow
 on:
   push
 
-job:
+jobs:
   name: Testing
   runs-on: ubuntu-latest
   steps:
@@ -12,4 +12,5 @@ job:
       run: ls -ltr
     - name: display content
       run: cat README.md      
+
 
