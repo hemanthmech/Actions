@@ -1,19 +1,15 @@
-- name: first work flow
-  on:
-    push
+name: first work flow
+on:
+  push
 
-  job:
+job:
 
-  name: Testing
-  runs-on: ubuntu-latest
-
-  steps:
-
+name: Testing
+runs-on: ubuntu-latest
+steps:
   - name: Checkout Repository
     uses: actions/checkout@v4
-
   - name: list
     run: ls -ltr
-
   - name: display content
     run: cat README.md      
