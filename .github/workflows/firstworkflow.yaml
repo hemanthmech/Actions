@@ -3,13 +3,13 @@ on:
   push
 
 job:
+  name: Testing
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: list
+      run: ls -ltr
+    - name: display content
+      run: cat README.md      
 
-name: Testing
-runs-on: ubuntu-latest
-steps:
-  - name: Checkout Repository
-    uses: actions/checkout@v4
-  - name: list
-    run: ls -ltr
-  - name: display content
-    run: cat README.md      
