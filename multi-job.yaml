@@ -1,0 +1,39 @@
+name: Multi-job 
+on:
+  push
+
+jobs:
+    build-job-1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: list the files
+          run: ls -lrt  
+        
+        - name: Executing shell script
+          run: |
+            sudo apt-get install cowsay
+            cowsay -f dragon "run for a cover , I am a drgaon " >> dragon.txt
+
+    test_job-1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: sleep for 10 sec
+              run: sleep 10
+            - name: test file exists
+              run: grep -i "dragon" dragon.txt
+
+    deploy-job-1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: sleep 10 sec
+              run: sleep 10
+
+            - name: display
+              run: cat dragon.txt
+            
+            - name: deploy
+              run: echo deploying ...  
+    
