@@ -10,8 +10,11 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v4
         - name: list
-          run: ls -ltr
-        - name: display content
-          run: cat README.md      
+          run: |
+             ls -ltr
+             cat README.md
+
+       #- name: display content
+       #  run: cat README.md      
 
 
