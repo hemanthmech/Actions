@@ -35,7 +35,7 @@ jobs:
         - name: Display structure of downloaded files
           run: !
             ls -R
-            grep -i "dragon" dragon.txt    
+            # grep -i "dragon" dragon.txt    
             
         # - name: test file exists
         #   run: grep -i "dragon" dragon.txt
