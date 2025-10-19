@@ -9,14 +9,5 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v4
         
-        - name: Install cowsay library
-          run: sudo apt-get install cowsay
-
-        - name: generate ASCII artwork
-          run: cowsay -f dragon "run for a cover , I am a drgaon " >> dragon.txt
-
-        - name: display dragon 
-          run: cat dragon.txt
-
-        - name: checkout repo files
-          run: ls -ltr       
+        - name: Executing shell script
+        - run : ./ASCII_script.sh
