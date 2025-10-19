@@ -12,7 +12,7 @@ jobs:
         - name: list the files
           run: ls -lrt  
         
-        - name: Executing shell script
-        - run: |
-              chmod +x ./ASCII_script.sh
-              ./ASCII_script.sh
+        # - name: Executing shell script
+        # - run: |
+        #       chmod +x ./ASCII_script.sh
+        #       ./ASCII_script.sh
