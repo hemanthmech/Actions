@@ -9,10 +9,14 @@ jobs:
       steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
-        - name: list
+        
+        - name: list & display the content
           run: |
              ls -ltr
              cat README.md
+
+        - name: generate ASCII artwork
+          run: cowsay -f dragon "run for a cover , I am a drgaon " >> dragon.txt    
 
        #- name: display content
        #  run: cat README.md      
