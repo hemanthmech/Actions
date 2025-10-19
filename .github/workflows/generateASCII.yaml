@@ -10,9 +10,9 @@ jobs:
           uses: actions/checkout@v4
 
         - name: list the files
-          run : ls -lrt  
+          run: ls -lrt  
         
         - name: Executing shell script
-        - run : |
+        - run: |
               chmod +x ./ASCII_script.sh
               ./ASCII_script.sh
