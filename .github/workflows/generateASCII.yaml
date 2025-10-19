@@ -8,6 +8,11 @@ jobs:
       steps:
         - name: Checkout Repository
           uses: actions/checkout@v4
+
+        - name: list the files
+          run : ls -lrt  
         
         - name: Executing shell script
-        - run : ./ASCII_script.sh
+        - run : |
+              chmod +x ./ASCII_script.sh
+              ./ASCII_script.sh
