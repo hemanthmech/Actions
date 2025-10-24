@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, ubuntu-20.04, windows-latest]
-        image: [hello-world, alpine]
+        images: [hello-world, alpine]
         exclude:
           - images: alpine
             os: windows-latest
@@ -18,7 +18,7 @@ jobs:
         run: docker info
 
       - name: Run docker image
-        run: docker run ${{ matrix.image }}
+        run: docker run ${{ matrix.images }}
 
         
           
