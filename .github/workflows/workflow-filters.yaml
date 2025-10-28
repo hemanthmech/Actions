@@ -12,8 +12,6 @@ on:
       - closed
     paths-ignore:
       - README.md  
-    branches:
-      - main  
   workflow_dispatch:
 
 jobs:
